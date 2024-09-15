@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="login-page" class="container">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div id="subject-page" class="container hidden">
+        <h2>Select Subject</h2>
+        <div class="subject-box" onclick="startQuiz('Maths')">Maths</div>
+        <div class="subject-box" onclick="startQuiz('Science')">Science</div>
+    </div>
+
+    <div id="quiz-page" class="container hidden">
+        <h2 id="subject-title"></h2>
+        <div id="quiz-container"></div>
+        <div class="score-counter">Score: <span id="score">0</span></div>
+        <button class="back-button" onclick="goBack()">Back to Homepage</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
